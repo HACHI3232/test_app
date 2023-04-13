@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TestApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+    <header>
+      <div class="header-logo">
+        <%= link_to("TOP", "/") %>
+      </div>
+      <ul class="header-menus">
+        <li>
+          <%= link_to("ABOUT", "/about") %>
+        </li>
+        <li>
+          <%= link_to("辞書", "/posts/index") %>
+        </li>
+      </ul>
+    </header>
+  <body>
+    <%= yield %>
+  </body>
+</html>
