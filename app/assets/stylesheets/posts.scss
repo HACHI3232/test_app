@@ -1,4 +1,7 @@
-/* ヘッダー */
+@charset "UTF-8";
+$base-color: #abf3e6;
+
+/* posts/header ================================ */
 .header {
 	display: flex;
 	align-items: center;
@@ -7,7 +10,6 @@
 }
 
 .header div {
-	/* display: inline-block; */
 	margin-left: 120px;
 	padding: 8px 0;
 }
@@ -26,6 +28,11 @@
 	cursor: pointer;
 }
 
+.top-image-keybo {
+	margin-left: 40px;
+}
+/* posts/header ================================ */
+
 /* posts/index ================================ */
 .posts-index-item {
 	padding: 20px 30px;
@@ -34,69 +41,14 @@
 	box-shadow: 0 2px 6px #c1ced7;
 }
 
-/* posts/show ================================ */
-.posts-show form {
-	display: inline;
-}
-
-.posts-show-item {
-	padding: 30px;
-	background-color: white;
-	box-shadow: 0 2px 6px #c1ced7;
-	overflow: hidden;
-}
-
-.posts-show-item img {
-	width: 60px;
-	height: 60px;
-	border-radius: 40%;
-	box-shadow: 0 2px 6px #c1ced7;
-	vertical-align: middle;
-	object-fit: cover;
-}
-
-.posts-show-item .post-user-name a {
-	vertical-align: middle;
-	font-size: 24px;
-	margin-left: 15px;
-}
-
-.posts-show-item p {
-	font-size: 24px;
-	margin: 20px 0;
-}
-
-.post-time {
-	color: #8899a6;
-	margin-bottom: 10px;
-}
-
-.post-menus {
-	float: right;
-}
-
-.post-menus a,
-.post-menus input {
-	color: #8899a6;
-	text-decoration: underline;
-	font-size: 14px;
-}
-
-/* posts/new ================================ */
-.posts-new textarea {
-	font-size: 20px;
-	padding: 10px;
-	min-height: 140px;
-	border: 1px solid rgb(216, 218, 223);
-	resize: none;
-}
-
-.posts-new textarea::-webkit-input-placeholder {
-	font-size: 24px;
-	opacity: 0.5;
-}
+/* posts/new 辞書の画面================================ */
 
 /* ボタン共通設定 */
+.content_btn {
+	text-align: right;
+	margin: 24px 56px 0 0;
+}
+
 .btn03 {
 	/*影の基点とするためrelativeを指定*/
 	position: relative;
@@ -156,40 +108,107 @@
 }
 
 /* 単語帳のカード */
-
-.card-wrapper {
-	display: flex;
-	justify-content: center;
-}
-
 .card-container {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	grid-gap: 20px;
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(300px, 1fr)
+	); /* カードの最小幅が250pxで、幅いっぱいにカードを配置 */
+	grid-gap: 20px; /* カード同士の隙間 */
+	margin: 30px 0 30px 30px;
+	display: flex;
 	justify-content: center;
+	flex-wrap: wrap; /* カードが横に増えたときに折り返す */
 }
 
 .card {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	padding: 20px;
-	background-color: #f56c6c;
+	background-color: #ffffff;
+	width: 300px;
+	height: 200px;
+	margin: 10px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 8px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
 .card__words {
-	background-color: #d1d1d1;
-	height: 50px;
-	width: 300px;
-	font-size: 26px;
+	height: 25px;
+	width: auto;
+	border-bottom: 1px solid #4b4b4b; /* word の下に線を引く */
 }
 
-.card__means {
-	background-color: #fff;
-	height: 100px;
-	width: 300px;
+/* posts/create 単語を保存する画面 ================================ */
+.main {
+	background-color: $base-color;
+	display: flex;
+	justify-content: center;
 }
 
-.top-image-keybo {
-	margin-left: 40px;
+.form__wrapper {
+	height: 400px;
+	width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #ffffff;
+}
+
+.page-heading {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+/* 保存ボタン	CSS */
+.content_save_btn {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.button-6 {
+	align-items: center;
+	background-color: #ffffff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 0.25rem;
+	box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+	box-sizing: border-box;
+	color: rgba(0, 0, 0, 0.85);
+	cursor: pointer;
+	display: inline-flex;
+	font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 600;
+	justify-content: center;
+	line-height: 1.25;
+	margin: 0;
+	min-height: 3rem;
+	padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+	position: relative;
+	text-decoration: none;
+	transition: all 250ms;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+	vertical-align: baseline;
+	width: auto;
+}
+
+.button-6:hover,
+.button-6:focus {
+	border-color: rgba(0, 0, 0, 0.15);
+	box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+	color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+	transform: translateY(-1px);
+}
+
+.button-6:active {
+	background-color: #f0f0f1;
+	border-color: rgba(0, 0, 0, 0.15);
+	box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+	color: rgba(0, 0, 0, 0.65);
+	transform: translateY(0);
 }
