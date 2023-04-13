@@ -1,9 +1,21 @@
-<div class="main posts-index">
-  <div class="container">
-    <% @posts.each do |post| %>
-      <div class="posts-index-item">
-        <%= post.word %>
-      </div>
-    <% end %>
+  <div class="header">
+    <div>
+      <%= image_tag 'keybo.png' %>
+      <span><%= image_tag 'logo.png', width: 410 %></span>
+    </div>
+    <div class="menu-icon">
+      <i class="fa-solid fa-bars"></i>
+    </div>
   </div>
-</div>
+  <div class="contents">
+    <div class="content_btn">
+      <a href="#" class="btn03 pushdown"><span>単語を登録する</span></a>
+      <a href="#" class="btn03 pushdown"><span>辞書を登録する</span></a>
+    </div>
+    <div class="card-wrapper">
+      <%= render partial:"word" %>
+    </div>
+  </div>
+
+
+  
