@@ -7,22 +7,20 @@
     <i class="fa-solid fa-bars"></i>
   </div>
 </div>
-  <div class="content_btn">
-    <a href="/posts/new" class="btn03 pushdown"><span>単語・用語を登録する</span></a>
-      <a href="#" class="btn03 pushdown"><span>辞書を登録する</span></a>
-  </div>
+
+<div class="button-section">
+  <a href="/posts/new" class="btn03 pushdown"><span>単語・用語を登録する</span></a>
+  <a href="#" class="btn03 pushdown"><span>辞書を登録する</span></a>
+</div>
+
 <div class="contents">
-    <div class="card-wrapper">
-      <div class="card-container">
+  <div class="card-wrapper">
+    <div class="card-container">
       <% @posts.each do |post| %>
         <div class="card">
-        <div class="card__words">
-        <%= post.word %>
+          <div class="card__words"><%= post.word %></div>
+          <div class="card__means"><%= post.mean %></div>
         </div>
-        <div class="card__means">
-        <%= post.mean %>
-        </div>
-      </div>
       <% end %>
     </div>
   </div>

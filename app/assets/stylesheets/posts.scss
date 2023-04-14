@@ -32,7 +32,9 @@ $base-color: #abf3e6;
 	margin-left: 40px;
 }
 /* posts/header ================================ */
-
+.page-heading__logo {
+	font-size: 20px;
+}
 /* posts/index ================================ */
 .posts-index-item {
 	padding: 20px 30px;
@@ -44,7 +46,7 @@ $base-color: #abf3e6;
 /* posts/new 辞書の画面================================ */
 
 /* ボタン共通設定 */
-.content_btn {
+.button-section {
 	text-align: right;
 	margin: 24px 56px 0 0;
 }
