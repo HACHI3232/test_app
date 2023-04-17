@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/* typing/index ================================ */
+
+.typing-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+}
+
+h2 {
+	font-size: 120px;
+}
+
+.start-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.start {
+	display: inline-block;
+	padding: 12px 24px;
+	font-size: 18px;
+	text-align: center;
+	background-color: #007bff;
+	border: 1px solid #007bff;
+	border-radius: 4px;
+	color: #fff;
+	text-decoration: none;
+}
+/* typing/edit ================================ */
+
+.q-wrap {
+	display: flex;
+	flex-direction: column; // 縦に並べる
+	align-items: center; // 横方向中央寄せ
+	justify-content: center; // 縦方向中央寄せ
+}
+
+.q-word {
+	font-size: 50px;
+}
+
+.q-mean {
+	font-size: 25px;
+}
+
+/* typing/result ================================ */
