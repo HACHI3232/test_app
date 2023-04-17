@@ -1,3 +1,65 @@
-// Place all the styles related to the categories controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@charset "UTF-8";
+$base-color: #BFE6FC;
+
+body, html {
+  height: 100%;
+	background-color: $base-color;
+}
+
+body {
+	color: #2d3133;
+	margin: 0;
+	min-height: 100vh;
+}
+
+.category-new-main {
+	background-color: $base-color;
+	display: flex;
+	justify-content: center;
+}
+.form__wrapper {
+	height: 400px;
+	width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #ffffff;
+}
+
+
+.page-heading {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+
+.category-card-container {
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(300px, 1fr)
+	); /* カードの最小幅が250pxで、幅いっぱいにカードを配置 */
+	grid-gap: 20px; /* カード同士の隙間 */
+	margin: 30px 0 30px 30px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap; /* カードが横に増えたときに折り返す */
+	
+}
+
+
+
+
+.category-card {
+  width: 250px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  position: relative;
+  background-color: #ffffff;
+
+}

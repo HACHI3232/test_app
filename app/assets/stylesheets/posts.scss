@@ -155,7 +155,7 @@ $base-color: #abf3e6;
 
 
 /* posts/create 単語を保存する画面 ================================ */
-.main {
+.post-main {
 	background-color: $base-color;
 	display: flex;
 	justify-content: center;
@@ -168,6 +168,8 @@ $base-color: #abf3e6;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	margin-top: 30px;
+	border-radius: 8px;
 	background-color: #ffffff;
 }
 
