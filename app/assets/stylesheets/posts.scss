@@ -31,7 +31,6 @@ $base-color: #abf3e6;
 .top-image-keybo {
 	margin-left: 40px;
 }
-/* posts/header ================================ */
 .page-heading__logo {
 	font-size: 20px;
 }
@@ -132,13 +131,28 @@ $base-color: #abf3e6;
 	text-align: center;
 	border-radius: 8px;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	position: relative;
+
 }
 
 .card__words {
 	height: 25px;
 	width: auto;
-	border-bottom: 1px solid #4b4b4b; /* word の下に線を引く */
+	font-size: 23px ;
+	font-weight: bold;
+
 }
+
+.card__means{
+	border-top: 1px solid #4b4b4b; 
+	margin-top: 10px;
+
+}
+
+.card__mean{
+	padding: 5px;
+}
+
 
 /* posts/create 単語を保存する画面 ================================ */
 .main {
@@ -213,4 +227,66 @@ $base-color: #abf3e6;
 	box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
 	color: rgba(0, 0, 0, 0.65);
 	transform: translateY(0);
+}
+
+
+/* 削除・編集ボタン	CSS */
+
+
+.before-btn-edit:hover::after,
+.btn-delete:hover::after {
+  content: attr(class);
+  position: absolute;
+  bottom: -25px;
+  left: -10px;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.card__buttons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.btn-delete {
+  margin-right: 10px;
+}
+
+.before-btn-edit:hover::after {
+  content: attr(class);
+  position: absolute;
+  bottom: -25px;
+  left: -40px;
+  background-color: #6e6e6e;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-delete:hover::after {
+  content: attr(class);
+  position: absolute;
+  bottom: -25px;
+  right: 10px;
+  background-color: #6e6e6e;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.before-btn-edit:hover::after {
+  content: "編集";
+}
+
+.btn-delete:hover::after {
+  content: "削除";
 }

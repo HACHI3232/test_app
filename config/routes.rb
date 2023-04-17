@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  get 'categories/index'
   get 'posts/index'
   get "/" => "home#top"
   get "/about" => "home#about"
@@ -9,3 +11,4 @@ Rails.application.routes.draw do
 
     resources :posts
 end
+
