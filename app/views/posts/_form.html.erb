@@ -1,4 +1,9 @@
-<%= form_with(model: @post, local: true) do |f| %>
+<%= form_with(model: @post, url: posts_path, local: true) do |f| %>
+<div class="field" style="text-align: center;">
+  <%= f.label :category_id, "辞書の名前" %><br>
+  <%= f.collection_select :category_id, @categories || [], :id, :name, { prompt: '辞書を選択してください' }, { class: 'form-control' } %>
+  
+</div>
 <div class="field" style="text-align: center;">
   <%= f.label :word, "単語・用語" %><br>
   <%= f.text_area :word, class: "form__text", id: "dictionary_word" %>

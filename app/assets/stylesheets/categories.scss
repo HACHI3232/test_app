@@ -45,21 +45,39 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap; /* カードが横に増えたときに折り返す */
-	
 }
 
 
 
 
 .category-card {
-  width: 250px;
-  height: 100px;
+  position: relative;
+  width: 245px;
+  height: 260px;
   margin: 10px;
   padding: 10px;
   text-align: center;
   border-radius: 8px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  position: relative;
-  background-color: #ffffff;
+  background-image: url("book.png");
+  background-repeat: no-repeat;
+	background-size: 300px,100px;
 
+}
+
+.category-name {
+  height: 60px;
+  width: 80px;
+  color: #000;
+  font-weight: bold;
+  position: absolute;
+  top: 53%;
+  left: 48%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.category-card__buttons {
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+	
 }

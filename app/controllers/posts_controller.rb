@@ -1,10 +1,17 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all.order(created_at: sort_direction)
+    @posts = if params[:category_id]
+                Post.where(category_id: params[:category_id])
+              else
+                Post.all.order(created_at: sort_direction)
+              end
+    @categories = Category.all
+
   end
   
   def new
     @post = Post.new
+    @categories = Category.all
   end
 
   def create
@@ -25,7 +32,6 @@ class PostsController < ApplicationController
   def edit
     @post = Post.find(params[:id])
 
-
   end
 
   def update
@@ -39,7 +45,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:word,:mean)
+    params.require(:post).permit(:word, :mean, :category_id)
   end
 
 
