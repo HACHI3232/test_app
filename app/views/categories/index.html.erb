@@ -1,8 +1,8 @@
 <body style="background-color: #BFE6FC">
 <%= render "shared/header" %>
 <div class="contents">
-  <div class="c-content__new">
-    <%= link_to "新しい辞書を登録する", new_category_path %>
+  <div class="content_new_btn">
+    <a href="/categories/new" class="button-6 button-large"><span>新しい辞書を登録する</span></a>
   </div>
   <div class="category-card-wrapper">
     <div class="category-card-container">
@@ -15,6 +15,9 @@
         </div>
       </div>
       <% end %>
+    </div>
+    <div class="content_return_btn">
+      <a href="/posts/index" class="button-6"><span>戻る</span></a>
     </div>
   </div>
 </div>

@@ -1,8 +1,6 @@
 <%= form_with(model: @post, url: posts_path, local: true) do |f| %>
 <div class="field" style="text-align: center;">
-  <%= f.label :category_id, "辞書の名前" %><br>
-  <%= f.collection_select :category_id, @categories || [], :id, :name, { prompt: '辞書を選択してください' }, { class: 'form-control' } %>
-  
+  <%= f.collection_select :category_id, @categories || [], :id, :name, { prompt: '辞書を選択' }, { class: 'form-control' } %>
 </div>
 <div class="field" style="text-align: center;">
   <%= f.label :word, "単語・用語" %><br>
@@ -16,3 +14,6 @@
     <button class="button-6" role="button"><span>保存する</span></button>
   </div>
 <% end %>
+    <div class="content_return_btn">
+    <a href="/posts/index" class="button-6"><span>辞書に戻る</span></a>
+  </div>
