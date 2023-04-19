@@ -3,8 +3,8 @@
   <%= select_tag(:sort_order, options_for_select([['昇順', 'asc'], ['降順', 'desc']], params[:sort_order]), class: 'form-control') %>
   <%= select_tag(:category_id, options_from_collection_for_select(@categories, "id", "name"), prompt: '辞書を絞り込む', class: 'form-control') %> 
   <div class="button-section">
-    <a href="/posts/new" class="btn03 pushdown"><span>単語・用語を登録する</span></a>
-    <a href="/categories/index" class="btn03 pushdown"><span>辞書一覧</span></a>
+    <a href="/posts/new" class="button-6"><span>単語・用語を登録する</span></a>
+    <a href="/categories/index" class="button-6"><span>辞書一覧</span></a>
   </div>
   <div class="contents">
     <div class="card-wrapper">
