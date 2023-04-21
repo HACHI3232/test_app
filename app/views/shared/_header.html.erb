@@ -3,14 +3,29 @@
     <%= link_to image_tag("keybo.png"), "/" %>
     <span><%= link_to image_tag("logo.png", width: 410), "/" %></span>
   </div>
-  <nav class="header__nav">
-    <%= link_to(image_tag("question.png",width:30, height:30) + " About", about_path) %>
-    <%= link_to(image_tag("t.png",width:30, height:30) + " Typing", typings_path) %>
-    <%= link_to(image_tag("book_blue.png",width:30, height:30) + " Dictionary", categories_path) %>
-    <%= link_to(image_tag("egg.png",width:30, height:30) + " Characterd", "#") %>
-  </nav>
   <div class="menu-icon">
     <i class="fa-solid fa-bars"></i>
   </div>
-  
+</div>
+<div class="h-container">
+  <nav class="hamburger__nav" style="position: absolute; z-index: 1; display: none">
+    <div class="main__nav__items">
+      <% nav_items = [
+        { link_path: about_path, img_src: "question.png", label: "About" },
+        { link_path: typings_path, img_src: "t.png", label: "Typing" },
+        { link_path: posts_path, img_src: "book_blue.png", label: "Dictionary" },
+        { link_path: "#", img_src: "egg.png", label: "Characters" }
+      ] %>
+      <% nav_items.each do |nav_item| %>
+        <%= link_to nav_item[:link_path], class: "dot-font" do %>
+          <%= image_tag(nav_item[:img_src], width: 60, height: 60, style: "vertical-align: middle;") %>
+          <span style="font-size: 50px; display: inline-block; vertical-align: middle;"><%= nav_item[:label] %></span>
+        <% end %>
+      <% end %>
+    </div>
+  </nav>
+</div>
+</div>
+  </div>
+  </nav>
 </div>
