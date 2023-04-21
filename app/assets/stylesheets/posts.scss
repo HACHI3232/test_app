@@ -2,6 +2,8 @@
 $base-color: #abf3e6;
 
 /* posts/header ================================ */
+
+
 .header {
 	display: flex;
 	align-items: center;
@@ -25,6 +27,7 @@ $base-color: #abf3e6;
 .header div i {
 	font-size: 40px;
 }
+
 
 .header .menu-icon {
 	margin-right: 64px;
@@ -180,6 +183,10 @@ $base-color: #abf3e6;
 	&.button-large {
 			width: 170px;
 	}
+
+	&.button-new {
+		width: 220px;
+}
 
 	// ホバー時のスタイル
 	&:hover,

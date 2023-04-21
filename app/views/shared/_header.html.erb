@@ -3,7 +3,14 @@
     <%= link_to image_tag("keybo.png"), "/" %>
     <span><%= link_to image_tag("logo.png", width: 410), "/" %></span>
   </div>
+  <nav class="header__nav">
+    <%= link_to(image_tag("question.png",width:30, height:30) + " About", about_path) %>
+    <%= link_to(image_tag("t.png",width:30, height:30) + " Typing", typings_path) %>
+    <%= link_to(image_tag("book_blue.png",width:30, height:30) + " Dictionary", categories_path) %>
+    <%= link_to(image_tag("egg.png",width:30, height:30) + " Characterd", "#") %>
+  </nav>
   <div class="menu-icon">
     <i class="fa-solid fa-bars"></i>
   </div>
+  
 </div>

@@ -1,4 +1,4 @@
-<%= form_with(model: @post, url: posts_path, local: true) do |f| %>
+<%= form_with(model: @post, local: true) do |f| %>
 <div class="field" style="text-align: center;">
   <%= f.collection_select :category_id, @categories || [], :id, :name, { prompt: '辞書を選択' }, { class: 'form-control' } %>
 </div>

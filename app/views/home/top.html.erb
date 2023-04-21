@@ -1,14 +1,17 @@
 <div class="main top-main">
   <div class="top-message">
-    <h2>MINE TYPING</h2>
-    <p>Yours Dictionary&Typing</p>
-    <nav>
-      <ul>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="/posts">Dictionary</a></li>
-        <li><a href="/typings">Typing</a></li>
-        <li><a href="#">Characters</a></li>
-      </ul>
+    <section class="main-section">
+      <span class="dot-font">MINE TYPING</span>
+    </section>
+    <nav class="main__nav">
+      <div class="main__nav__items ">
+        <%= link_to(image_tag("question.png",width:30, height:30) + " About", about_path, class: "dot-font") %>
+        <%= link_to(image_tag("t.png",width:30, height:30) + " Typing", typings_path, class: "dot-font")  %>
+        <%= link_to(image_tag("book_blue.png",width:30, height:30) + " Dictionary", posts_path, class: "dot-font") %>
+        <%= link_to(image_tag("egg.png",width:30, height:30) + " Characters", "#", class: "dot-font")  %>
+      </div>
     </nav>
   </div>
+
 </div>
+

@@ -9,6 +9,13 @@ html {
 	letter-spacing: 1px;
 }
 
+.dot-font{
+	font-family: 'Mobile Font Regular';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Mobile Font Regular'), url('./MobileFont.woff') format('woff');
+}
+
 ul,
 li {
 	list-style-type: none;
@@ -83,6 +90,70 @@ header {
 	position: absolute;
 	z-index: 1;
 	width: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 229px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main span {
+  display: inline-block;
+  width: 10.5ch; /* 文字列の長さに応じて変更してください */
+  // font: bold 200% Consolas, Monaco, monospace;
+  overflow: hidden;
+  white-space: nowrap;
+	font-size: 80px;
+  font-weight: 400;
+  border-right: 2px solid transparent;
+  animation: typing 3s steps(10), caret 0.8s steps(1) infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+	to{
+		width: 100%;
+	}
+}
+
+@keyframes caret {
+  80% {
+    border-right-color: currentColor;
+  }
+
+	
+}
+
+.main__nav {
+	display: inline-flex;
+  justify-content: center;
+  width: 280px;
+  height: 220px;
+  border-radius: 15px;
+	
+  background-color: #FFFFFF;
+  border: 6px solid #00A7FF;
+	background-color: rgba(255, 255, 255, 0.5); /* 透過させる */
+
+
+}
+
+.main__nav__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 変更 */
+  align-items: flex-start;
+  padding: 25px 0	0 0;
+}
+
+.header__nav__items a {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
 /* top ================================ */
@@ -211,3 +282,7 @@ header {
 	border-radius: 0 0 2px 2px;
 	font-size: 14px;
 }
+
+
+/* footer ================================ */
+
