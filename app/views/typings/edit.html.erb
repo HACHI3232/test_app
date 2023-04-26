@@ -1,18 +1,28 @@
 <div id="t-container">
-  <div id="word"></div>
-  <input type="text" id="input" oninput="checkInput()" autofocus>
-</div>
 <div class="q-wrap">
+  <div class="word-section">
+    <div id="word"></div>
+    <input type="text" id="input" oninput="checkInput()" autofocus>
+  </div>
   <div class="q-wrap">
     <div id="mean"></div>
   </div>
-  <div class="character"><%= image_tag("k-#{@character.level}.gif")%></div>
+  <div class="character-wrap">
+    <div class="character__judge">
+      <%= image_tag("mark_maru.png", alt: "Success Image", class: "success-image hidden") %>
+      <%= image_tag("mark_batsu.png", alt: "Failed Image", class: "failed-image hidden") %>
+    </div>
+    <div class="character">
+      <%= image_tag("k-#{@character.level}.gif", alt: "Character Image") %>
+    </div>
+  </div>
   <div class="keyboard-section">
     <input class="input" placeholder="Tap on the virtual keyboard to start" />
     <div class="simple-keyboard"></div>
   </div>
-  <%= link_to"結果","result" %>
+  <%= link_to "結果", "result" %>
 </div>
+
 <script>
   const dictionaries = <%= raw @random_posts&.to_json || [].to_json %>;
   let currentWordIndex = 0;
@@ -21,6 +31,9 @@
   let currentFieldValue = input.value;
   let successCount = 0;
   let failedCount = 0;
+  const characterImage = document.querySelector(".character img:first-child");
+  const successImage = document.querySelector(".success-image");
+  const failedImage = document.querySelector(".failed-image");
 
   function displayWordAndMean(dictionary, index=0) {
     if (!dictionary) return null;
@@ -30,30 +43,40 @@
     meanDom.innerHTML = dictionary.mean;
   }
 
-  function checkInput() {
-    currentFieldValue = currentFieldValue += input.value;
+function checkInput() {
+  currentFieldValue = currentFieldValue += input.value;
 
-    if (!dictionaries[currentWordIndex] || (input.value.length != dictionaries[currentWordIndex].word.length)) return;
+  if (!dictionaries[currentWordIndex] || (input.value.length != dictionaries[currentWordIndex].word.length)) return;
 
-    if (input.value == dictionaries[currentWordIndex].word) {
-      successCount++;
-      currentWordIndex++;
-      input.value = "";
-    } else {
-      failedCount++;
-      currentWordIndex++;
-      input.value = "";
-      displayWordAndMean(dictionaries[currentWordIndex]);
-    }
-
-    if (dictionaries[currentWordIndex]) {
-      // 成功した時に次があれば表示
-      displayWordAndMean(dictionaries[currentWordIndex]);
-    } else {
-      // なければresultにリダイレクト
-      window.location.href = `/typings/result?success=${successCount}&failed=${failedCount}`;
-    }
+  if (input.value == dictionaries[currentWordIndex].word) {
+    successCount++;
+    currentWordIndex++;
+    input.value = "";
+    successImage.classList.remove("hidden");
+    failedImage.classList.add("hidden");
+  } else {
+    failedCount++;
+    currentWordIndex++;
+    input.value = "";
+    failedImage.classList.remove("hidden");
+    successImage.classList.add("hidden");
+    displayWordAndMean(dictionaries[currentWordIndex]);
   }
+
+  if (dictionaries[currentWordIndex]) {
+    // 成功した時に次があれば表示
+    displayWordAndMean(dictionaries[currentWordIndex]);
+  } else {
+    // なければresultにリダイレクト
+    window.location.href = `/typings/result?success=${successCount}&failed=${failedCount}`;
+  }
+}
 
   displayWordAndMean(dictionaries[currentWordIndex]);
 </script>
+
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
