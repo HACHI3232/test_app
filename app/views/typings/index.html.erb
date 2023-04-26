@@ -1,18 +1,22 @@
 <body>
-  
-<div class="typing-wrap">
-  <h2 class="dot-font">Hello!</h2>
-  <div class="start-wrap">
-    <%= link_to "START", "typings/edit", class: "start dot-font" %>
-  </div>
-  <div class="my-characters">
-    <div class="character"><%= image_tag("k-#{@character.level}.gif")%></div>
-
-
-    <div class ="character_status">
-      <div class="name dot-font"><%= @character.name %></div>
-      <div class="level dot-font"><%= @character.level %> Level</div>
+  <div class="typing-wrap">
+    <p class="dot-font bound ">
+    <span>H</span>
+    <span>e</span>
+    <span>l</span>
+    <span>l</span>
+    <span>o</span>
+    <span>!</span>
+    </p>
+    <div class="my-characters">
+      <div class="character"><%= image_tag("k-#{@character.level}.gif")%></div>
+      <div class ="character_status">
+        <div class="name dot-font"><%= @character.name %></div>
+        <div class="level dot-font"><%= @character.level %> Level</div>
+      </div>
+      <div class="start-wrap">
+      <%= link_to "START", typings_edit_path, class: "start dot-font" %>
+      </div>
     </div>
   </div>
-</div>
 </body>
