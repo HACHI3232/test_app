@@ -62,7 +62,7 @@ header .menu-icon {
 /* 共通レイアウト ================================ */
 body {
 	color: #2d3133;
-	background-color: #abf3e6;
+	// background-color: #abf3e6;
 	margin: 0;
 	height: auto;
 }
@@ -83,6 +83,20 @@ header {
 	z-index: 1;
 	width: 100%;
 }
+
+
+.header__title {
+  &__img,
+  &__logo {
+    display: inline-block;
+    vertical-align: middle;
+
+  }
+}
+.header_logo{
+	margin: 20px 0 0 50px;
+}
+
 
 .main {
   width: 100%;
@@ -165,24 +179,6 @@ header {
   text-align: left;
 }
 
-
-// .h-container{
-// 	position: fixed;
-// 	top: 0;
-// 	bottom: 0;
-// 	left: 0;
-// 	right: 0;
-// 	background-color: #fff;
-// 	background-color: rgba(255, 255, 255, 0.5); /* 透過させる */
-// 	z-index: 9;
-// 	opacity: 0;
-// 	pointer-events: none;
-// }
-
-// .h-container{
-// 	opacity: 0;
-// 	pointer-events: auto;
-// }
 
 
 /* top ================================ */

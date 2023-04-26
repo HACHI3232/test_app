@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* typing/index ================================ */
+body{
+	background-color: #BFE6FC;
+}
+
 
 .typing-wrap {
 	display: flex;
@@ -30,6 +34,16 @@ h2 {
 	color: #fff;
 	text-decoration: none;
 }
+
+
+.character_status{
+	text-align: center;
+	font-size: 30px;
+}
+
+
+
+
 /* typing/edit ================================ */
 
 .q-wrap {
@@ -50,6 +64,82 @@ h2 {
 /* typing/result ================================ */
 .result-wrap {
   text-align: center;
+}
 
-  // その他のスタイル
+/* ボタン共通設定 */
+.btn02	{
+	/*矢印の基点とするためrelativeを指定*/
+position: relative;
+	/*ボタンの形状*/
+text-decoration: none;
+display: inline-block;
+background:#007bff;
+color:#fff;
+	padding: 10px 40px 10px 30px;
+border-radius:25px;
+	text-align: center;
+	outline: none;
+	/*アニメーションの指定*/
+	transition: ease .2s;
+}
+
+.btn02:hover{
+background:#0052aa;
+}
+
+/* 矢印が右に移動して現在地に戻る */
+
+.btnarrow2::after{
+	content: '';
+	/*絶対配置で矢印の位置を決める*/
+position: absolute;
+	top:42%;
+	right: 13px;
+	/*矢印の形状*/
+	width: 5px;
+	height: 5px;
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+	transform: rotate(45deg);
+}
+
+/*hoverした際のアニメーション*/
+.btnarrow2:hover::after{
+animation: arrow .5s;
+}
+
+@keyframes arrow {
+50% {
+	right: 10px;
+}
+100% {
+	right: 13px;
+}
+}
+
+/* typing/keybord ================================ */
+.input {
+  display: none;
+}
+
+.input:placeholder-shown {
+  opacity: 1;
+	
+}
+.always-visible::-webkit-input-placeholder {
+  visibility: visible;
+}
+
+
+#t-container {
+	text-align: center;
+	margin-top: 50px;
+}
+#word {
+	font-size: 40px;
+}
+#input {
+	font-size: 30px;
+	margin-top: 20px;
+	width: 300px;
 }

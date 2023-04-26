@@ -1,7 +1,13 @@
 <div class="header">
-  <div>
-    <%= link_to image_tag("keybo.png"), "/" %>
-    <span><%= link_to image_tag("logo.png", width: 410), "/" %></span>
+  <div class="header_logo">
+    <div class="header__title__img">
+      <%= link_to "/", class: "my-class" do %>
+      <%= image_tag("k-#{@character.level}.gif", width: 70, height: 70) %>
+      <% end %>
+    </div>
+    <div class="header__title__logo">
+      <%= link_to "MINE TYPING", "/", class: "dot-font", style: "font-size: 50px;" %>
+    </div>
   </div>
   <div class="menu-icon">
     <i class="fa-solid fa-bars"></i>

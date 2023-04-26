@@ -11,10 +11,6 @@ $base-color: #abf3e6;
 	background: rgba(255, 255, 255, 0.5);
 }
 
-.header div {
-	margin-left: 60px;
-	padding: 8px 0;
-}
 
 .header span img {
 	margin-left: 16px;
@@ -26,6 +22,7 @@ $base-color: #abf3e6;
 
 .header div i {
 	font-size: 40px;
+	margin-top: 15px;
 }
 
 
@@ -79,6 +76,7 @@ $base-color: #abf3e6;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 	position: relative;
 
+
 }
 
 .card__words {
@@ -86,17 +84,15 @@ $base-color: #abf3e6;
 	width: auto;
 	font-size: 23px ;
 	font-weight: bold;
-
-}
-
-.card__means{
-	border-top: 1px solid #4b4b4b; 
-	margin-top: 10px;
+	
 
 }
 
 .card__mean{
-	padding: 5px;
+	border-top: 1px solid #4b4b4b; 
+	margin-top: 10px;
+	height: 120px; /* 適切な高さに調整してください */
+	overflow-y: auto;
 }
 
 
@@ -236,7 +232,7 @@ $base-color: #abf3e6;
 
 .card__buttons {
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   right: 0;
 }
 

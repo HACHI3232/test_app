@@ -11,22 +11,19 @@
       <a href="/categories/index" class="button-6"><span>辞書一覧</span></a>
     </div>
   </div>
-  <div class="contents">
-    <div class="card-wrapper">
-      <div class="card-container">
-        <% @posts.each do |post| %>
-          <div class="card">
-            <div class="card__words"><%= post.word %></div>
-            <div class="card__means">
-              <div class="card__mean"><%= post.mean %></div>
-            </div>
-            <div class="card__buttons">
-              <%= link_to image_tag("edit-btn.png", size: "25x20"), edit_post_path(post), class: "before-btn-edit"%>
-              <%= link_to image_tag("delete-btn.png", size: "18x18"), post_path(post), method: :delete, data: { confirm: '本当に削除しますか?' }, class: "btn-delete"%>
-            </div>
+
+  <div class="card-wrapper">
+    <div class="card-container">
+      <% @posts.each do |post| %>
+        <div class="card">
+          <div class="card__words"><%= post.word %></div>
+            <div class="card__mean"><%= post.mean %></div>
+          <div class="card__buttons">
+            <%= link_to image_tag("edit-btn.png", size: "25x20"), edit_post_path(post), class: "before-btn-edit"%>
+            <%= link_to image_tag("delete-btn.png", size: "18x18"), post_path(post), method: :delete, data: { confirm: '本当に削除しますか?' }, class: "btn-delete"%>
           </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </body>

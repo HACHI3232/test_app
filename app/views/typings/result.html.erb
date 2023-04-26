@@ -3,14 +3,15 @@
 １０問中  ５問正解しました！
 がんばりましょう！
 
-    <div class="my-characters">
-    
-
-      <div class="character"><%= image_tag("keybo-#{@character.level}.gif")%></div>
-      <div class="name"><%= @character.name %></div>
-      <div class="level"><%= @character.level %>level</div>
-    <div class="r-link">
-      <%= link_to "続ける", "/typings" %>
-      <%= link_to "辞書に戻る",  posts_index_path %>
+  <div class="my-characters">
+    <div class="character"><%= image_tag("k-#{@character.level}.gif")%></div>
+    <div class ="character_status">
+      <div class="name dot-font"><%= @character.name %></div>
+      <div class="level dot-font"><%= @character.level %> Level</div>
     </div>
+  </div>
+  <div class="r-link">
+<%= link_to "続ける", "/typings", class: "btn02 btnarrow2", style: "font-size: 15px "%>
+<%= link_to "辞書に戻る", posts_index_path, class: "btn02 btnarrow2", style: "font-size: 15px "%>
+  </div>
 </div>

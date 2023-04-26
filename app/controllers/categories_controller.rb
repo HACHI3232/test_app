@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  before_action :set_character
+
   def index
     @categories = Category.all
   end
@@ -18,7 +20,6 @@ class CategoriesController < ApplicationController
 
   def edit
     @category = Category.find(params[:id])
-    
   end
 
   def destroy
@@ -44,5 +45,9 @@ class CategoriesController < ApplicationController
 
   def category_params
     params.require(:category).permit(:name)
+  end
+
+  def set_character
+    @character = Character.find_by(id: 1)
   end
 end
