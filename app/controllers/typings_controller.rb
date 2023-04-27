@@ -7,7 +7,9 @@ class TypingsController < ApplicationController
   def edit
     @dictionaries = Post.all
     @character = Character.find_by(id: 1)
-    @random_posts = Post.order("RAND()").limit(10)
+    # @random_posts = Post.order("RAND()").limit(10)
+    @random_posts = Post.order("RANDOM()").limit(10)
+
   end
 
   def result
