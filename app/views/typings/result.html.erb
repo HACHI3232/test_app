@@ -1,17 +1,17 @@
 
 <div class="result-wrap">
-１０問中  ５問正解しました！
-がんばりましょう！
-
+  <div class="result-comment">
+    １０問中  <%= @result[:success] %>問正解しました！
+  </div>
   <div class="my-characters">
     <div class="character"><%= image_tag("k-#{@character.level}.gif")%></div>
     <div class ="character_status">
       <div class="name dot-font"><%= @character.name %></div>
+      <div class="character_icon"><%= image_tag("flower.png")%></div>
       <div class="level dot-font"><%= @character.level %> Level</div>
-    </div>
   </div>
   <div class="r-link">
-<%= link_to "続ける", "/typings", class: "btn02 btnarrow2", style: "font-size: 15px "%>
-<%= link_to "辞書に戻る", posts_index_path, class: "btn02 btnarrow2", style: "font-size: 15px "%>
+    <%= link_to "続ける", "/typings", class: "btn02 btnarrow2", style: "font-size: 15px "%>
+    <%= link_to "辞書に戻る", posts_index_path, class: "btn02 btnarrow2", style: "font-size: 15px "%>
   </div>
 </div>

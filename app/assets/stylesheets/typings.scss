@@ -36,10 +36,6 @@ h2 {
 }
 
 
-.character_status{
-	text-align: center;
-	font-size: 30px;
-}
 
 .start{
 	    /*キラッと光る基点とするためrelativeを指定*/
@@ -121,13 +117,43 @@ p{
   font-weight: bold;
 }
 
-.character_status{
-	display: flex;
+.character{
+	text-align: center;
 }
 
+.character_status{
+	display: flex;
+	justify-content: center;
+	font-size: 30px;
+}
 
+.character_icon img{
+	height: 48px;
+	width: 78px;
+}
+
+.level{
+	margin-left: 10px;
+}
 
 /* typing/edit ================================ */
+#input.correct {
+  color: green;
+}
+#input.incorrect {
+  color: red;
+}
+
+div#word{
+	font-size: 60px;
+	font-weight: 600;
+}
+
+div#mean {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
 
 .q-wrap {
 	display: flex;

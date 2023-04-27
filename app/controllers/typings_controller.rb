@@ -11,10 +11,14 @@ class TypingsController < ApplicationController
 
   def result
     @character = Character.find_by(id: 1)
-    # 成功、失敗の数でキャラのレベルをアップデートする
-    # params[:success], params[:failed] にはいってるよ
-    # 成功と失敗がいくつずつだった時にレベルをいくつアップデートするかは決めてね
-    # @character.update(level: xxx)
+    @success = params[:success].to_i
+    @character.update(experience:@character.experience+@success)
+
+
+
+    if @character.experience >= 20
+      @character.update(level: @character.level+5, experience: @character.experience - 20)
+    end
 
     @result = {
       success: params[:success],
