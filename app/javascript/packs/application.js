@@ -9,7 +9,7 @@ require("@rails/activestorage").start();
 require("channels");
 require("keyboard");
 require("common");
-require("common/load");
+// require("common/load");
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
