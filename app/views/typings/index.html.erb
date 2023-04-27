@@ -1,5 +1,12 @@
 <body>
+
+<div class ="head">
+</div>
+
   <div class="typing-wrap">
+    <div class="start-wrap">
+      <%= link_to "START", typings_edit_path, class: "start dot-font" %>
+    </div>
     <p class="dot-font bound ">
     <span>H</span>
     <span>e</span>
@@ -8,16 +15,15 @@
     <span>o</span>
     <span>!</span>
     </p>
-    <div class="my-characters">
-      <div class="character"><%= image_tag("k-#{@character.level}.gif")%></div>
-      <div class ="character_status">
-        <div class="name dot-font"><%= @character.name %></div>
-        <div class="character_icon"><%= image_tag("flower.png")%></div>
-        <div class="level dot-font"> Level   <%= @character.level %></div>
-      </div>
-      <div class="start-wrap">
-      <%= link_to "START", typings_edit_path, class: "start dot-font" %>
+      <div class="my-characters">
+        <div class="character"><%= image_tag("k-#{@character.level}.gif")%></div>
+        <div class ="character_status">
+          <div class="name dot-font"><%= @character.name %></div>
+          <div class="character_icon"><%= image_tag("flower.png")%></div>
+          <div class="level dot-font"> Level   <%= @character.level %></div>
+        </div>
+
       </div>
     </div>
-  </div>
+
 </body>
