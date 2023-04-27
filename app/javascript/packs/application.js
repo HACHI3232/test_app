@@ -9,7 +9,6 @@ require("@rails/activestorage").start();
 require("channels");
 require("keyboard");
 require("common");
-require("keyboard/word-game");
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
