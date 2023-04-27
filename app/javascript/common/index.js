@@ -50,7 +50,6 @@ window.addEventListener('load', (event) => {
 	const mainNavigation = document.getElementsByClassName("hamburger__nav")[0];
 
 	menuIcon.addEventListener("click",function (e) {
-		console.log('opkopkl');
 		if (mainNavigation.style.display == "none") {
 			mainNavigation.style.display = "inline-flex";
 		} else {
