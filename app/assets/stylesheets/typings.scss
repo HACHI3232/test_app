@@ -8,7 +8,7 @@
 
 
 .head{
-	height: 255px;
+	height: 190px;
 }
 
 
@@ -310,10 +310,12 @@ animation: arrow .5s;
   visibility: visible;
 }
 
+.keyboard-section{
+	margin-top: 30px;
+}
 
 #t-container {
 	text-align: center;
-	margin-top: 50px;
 }
 #word {
 	font-size: 40px;
@@ -324,9 +326,12 @@ animation: arrow .5s;
 	width: 300px;
 }
 
+
 /* typing/edit ================================ */
 .character-wrap {
-  position: relative;
+	position: fixed;
+	right: 250px;
+	bottom: 295px;
 
   .success-image {
     position: absolute;
@@ -341,17 +346,17 @@ animation: arrow .5s;
   }
 }
 
-
-
-
 .success-image {
 	height: 40px;
 	width: 40px;
 }
 
-
 .failed-image{
 	height: 40px;
 	width: 40px;
 
+}
+
+.word-section{
+margin-top: 20px;
 }

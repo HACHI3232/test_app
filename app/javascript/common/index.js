@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		order_select.addEventListener("change", function () {
 			var selected_value = order_select.value;
 
-			var xhr = new XMLHttpRequest();
+			var xhr = new XMLHttpRequest(); 
 			xhr.responseType = "document";
 			xhr.open("GET", "/posts?sort_order=" + selected_value, true);
 			xhr.onload = function () {

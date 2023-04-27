@@ -1,8 +1,6 @@
 <div class="body">
-
 <div class ="head">
 </div>
-
   <div class="typing-wrap">
     <div class="start-wrap">
       <%= link_to "START", typings_edit_path, class: "start dot-font" %>
@@ -22,8 +20,7 @@
           <div class="character_icon"><%= image_tag("flower.png")%></div>
           <div class="level dot-font"> Level   <%= @character.level %></div>
         </div>
-
       </div>
     </div>
-
 </div>
+  <%= render "shared/footer" %>

@@ -100,7 +100,6 @@ header {
 .main {
   width: 100%;
   height: 229px;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -137,7 +136,7 @@ header {
 	display: inline-flex;
   justify-content: center;
   width: 330px;
-  height: 300px;
+  height: 250px;
   border-radius: 15px;
 	  background-color: #FFFFFF;
   border: 6px solid #101010;
@@ -182,23 +181,20 @@ header {
 
 /* top ================================ */
 .top-main {
-	padding: 100px 0 100px;
 	text-align: center;
 	position: absolute;
 	top: 0;
-	width: 100%;
-	height: auto;
 	min-height: 100%;
 	color: rgb(0, 0, 0);
-	background-color: #abf3e6;
 	background-repeat: no-repeat;
 	background-position: center 50%;
 	background-size: cover;
-	background-image: url("top.jpg");
+	background-image: url("top.png");
 }
 
 .top-message {
 	position: relative;
+	margin-top: 10%;
 }
 
 .top-main h2 {
@@ -308,4 +304,38 @@ header {
 }
 
 
+/* about ================================ */
+
+.about-body{
+	background-image: url("sougen.png");
+	height: 100vh;
+}
+
+.about-contents {
+  display: flex;
+  justify-content: center;
+  height: 100vh; /* 追加 */
+}
+
+.about {
+  display: flex;
+  align-items: center; /* 追加 */
+  justify-content: center;
+  max-width: 80%; /* 追加 */
+}
+.keybo{
+	margin-top: 40px;
+}
+
+.box{
+	background-color: white;
+	border-radius: 16px;
+	padding: 15px;
+}
 /* footer ================================ */
+footer{position: fixed;
+bottom: 0;
+left: 0;
+right: 0;
+text-align: center;
+}
