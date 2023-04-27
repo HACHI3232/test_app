@@ -62,7 +62,6 @@ header .menu-icon {
 /* 共通レイアウト ================================ */
 body {
 	color: #2d3133;
-	// background-color: #abf3e6;
 	margin: 0;
 	height: auto;
 }
@@ -74,7 +73,21 @@ body {
 	padding-right: 15px;
 	clear: both;
 }
+/* loading ================================ */
+#loading{
+	transition: all 1s;
+	background-color: #ffffff;
+	position: fixed;
+	z-index: 9999;
+	inset: 0;
+	display: grid;
+	place-items: center;
+}
 
+.loaded{
+	opacity: 0;
+	visibility: hidden;
+}
 
 /* ヘッダー ================================ */
 header {

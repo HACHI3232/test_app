@@ -1,5 +1,6 @@
 class TypingsController < ApplicationController
   def index
+    @character = Character.new(id: 1, name: "keybo", experience: 0)
     @character = Character.find_by(id: 1)
   end
 
