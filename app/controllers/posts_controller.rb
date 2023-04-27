@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   before_action :set_character
 
   def index
-    binding.pry
     @posts = if params[:category_id]
                 Post.where(category_id: params[:category_id])
               else

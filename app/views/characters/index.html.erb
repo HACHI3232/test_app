@@ -15,3 +15,10 @@
     これから一緒に成長していきましょう。
     </div>
 </div>
+
+<%= form_with model:Character.new do |form| %>
+  <%= form.text_field :name, value: 'keybo' %>
+  <%= form.number_field :level, value: 0 %>
+  <%= form.number_field :experience, value: 0 %>
+  <%= form.submit 'Create Character' %>
+<% end %>
