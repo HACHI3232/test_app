@@ -2,10 +2,10 @@ class PostsController < ApplicationController
   before_action :set_character
 
   def index
-    @posts = if params[:category_id]
-                Post.where(category_id: params[:category_id])
+    @posts = if params[:category_id].present?
+                  Post.where(category_id: params[:category_id]).order(created_at: sort_direction)
               else
-                Post.all.order(created_at: sort_direction)
+                  Post.order(created_at: sort_direction)
               end
     @categories = Category.all
   end

@@ -7,6 +7,7 @@
     <%= select_tag(:category_id, options_from_collection_for_select(@categories, "id", "name"), prompt: '辞書を絞り込む', class: 'form-control') %> 
     </div>
     <div class="add-btns">
+      <a href="/categories/new" class="button-6 button-new"><span>新しい辞書を登録する</span></a>
       <a href="/posts/new" class="button-6 button-large"><span>単語を登録する</span></a>
       <a href="/categories/index" class="button-6"><span>辞書一覧</span></a>
     </div>
@@ -27,3 +28,4 @@
     </div>
   </div>
 </body>
+<%= javascript_pack_tag 'dictionary_order' %>

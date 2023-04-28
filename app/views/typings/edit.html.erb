@@ -28,7 +28,8 @@
     </div>
 </div>
 </div>
-  <%= render "shared/footer" %>
+<%= render "shared/footer" %>
+<%= javascript_pack_tag 'keyboard' %>
 
 <script>
   const dictionaries = <%= raw @random_posts&.to_json || [].to_json %>;
