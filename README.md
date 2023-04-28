@@ -1,25 +1,11 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# test_app
+# アプリケーション名
+  
+---
+# MIND TYPING
+---
+単語・意味が登録できる辞書が作成でき、その登録した単語でタイピング練習ができる
+タイピング練習をすることによりキャラクターが育つ
+---
+# URL
+---
+http://
