@@ -8,7 +8,7 @@
     <div class="category-card-container">
       <% @categories.each do |category| %>
       <div class="category-card">
-        <%= link_to category.name,"#" ,class:"category-name"%>
+        <div class="category-name"><%= category.name%></div>
         <div class="category-card__buttons">
           <%= link_to image_tag("edit-btn.png", size: "25x20"), edit_category_path(category), class: "before-btn-edit"%>
           <%= link_to image_tag("delete-btn.png", size: "18x18"), category_path(category), method: :delete, data: { confirm: '本当に削除しますか?' }, class: "btn-delete"%>
