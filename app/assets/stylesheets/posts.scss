@@ -67,7 +67,7 @@ $base-color: #abf3e6;
 
 .card {
 	background-color: #ffffff;
-	width: 300px;
+	width: 350px;
 	height: 200px;
 	margin: 10px;
 	padding: 10px;
@@ -82,16 +82,17 @@ $base-color: #abf3e6;
 .card__words {
 	height: 25px;
 	width: auto;
-	font-size: 23px ;
+	font-size: 23px;
 	font-weight: bold;
-	
-
+	white-space: pre-wrap;
+	word-break: break-word; /* 19文字で折り返す */
 }
 
 .card__mean{
 	border-top: 1px solid #4b4b4b; 
 	margin-top: 10px;
-	height: 120px; /* 適切な高さに調整してください */
+	padding-top: 10px;
+	height: 120px; 
 	overflow-y: auto;
 }
 

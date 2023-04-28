@@ -2,35 +2,30 @@
   
 <div class="main top-main">
   <div class="top-message">
-    <section class="main-section">
-      <span class="dot-font">MINE TYPING</span>
-    </section>
-    <nav class="main__nav">
-      <div class="main__nav__items">
-        <a href="<%= about_path %>" class="dot-font">
-          <%= image_tag("mark_shoshinsha.png", width: 50, height: 50, style: "vertical-align: middle; margin-right: 10px;") %>
-          About
-        </a>
-        <a href="<%= posts_path %>" class="dot-font">
-          <%= image_tag("book_blue.png", width: 50, height: 50, style: "vertical-align: middle; margin-right: 10px;") %>
-          Dictionary
-        </a>
-        <a href="<%= typings_path %>" class="dot-font">
-          <%= image_tag("t.png", width: 50, height: 50, style: "vertical-align: middle; margin-right: 10px;") %>
-          Typing
-        </a>
-
-        <%# <a href="characters" class="dot-font">
-          <%= image_tag("egg.png", width: 50, height: 50, style: "vertical-align: middle; margin-right: 10px;") %>
-          <%# Characters
-        </a>
-      </div>  %>
-    </nav>
-    
-    </div>
-
+    <span class="dot-font" id="ityped"></span>
+      <script>
+      ityped.init(document.querySelector("#ityped"), {
+        strings: ['MINE TYPING', 'and Enjoy!'],
+            typeSpeed:  200//タイピングのスピード
+      })
+      </script> 
   </div>
-
+  <nav class="main__nav">
+    <div class="main__nav__items">
+      <a href="<%= about_path %>" class="dot-font">
+        <%= image_tag("mark_shoshinsha.png", width: 50, height: 50, style: "vertical-align: middle; margin-right: 10px;") %>
+        About
+      </a>
+      <a href="<%= posts_path %>" class="dot-font">
+        <%= image_tag("book_blue.png", width: 50, height: 50, style: "vertical-align: middle; margin-right: 10px;") %>
+        Dictionary
+      </a>
+      <a href="<%= typings_path %>" class="dot-font">
+        <%= image_tag("t.png", width: 50, height: 50, style: "vertical-align: middle; margin-right: 10px;") %>
+        Typing
+      </a>
+    </div>
+  </nav>
 </div>
 <footer>
   &copy; chsato harada 2023
