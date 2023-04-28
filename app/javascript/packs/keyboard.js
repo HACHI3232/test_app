@@ -34,41 +34,41 @@ const fullKeyboardLayout = {
   }
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-	let Keyboard = window.SimpleKeyboard.default;
 
-	let keyboard = new Keyboard({
-		onChange: (input) => onChange(input),
-		onKeyPress: (button) => onKeyPress(button),
-		physicalKeyboardHighlight: true,
-		...fullKeyboardLayout,
-	});
 
-	document.querySelector(".input").addEventListener("input", (event) => {
-		const inputValue = event.target.value;
-		keyboard.setInput(inputValue);
-	});
+let Keyboard = window.SimpleKeyboard.default;
 
-	function onChange(input) {
-		document.querySelector(".input").value = input;
-	}
-
-	function onKeyPress(button) {
-		console.log("Button pressed", button);
-
-		/**
-		 * If you want to handle the shift and caps lock buttons
-		 */
-
-		if (button === "{shiftleft}" || button === "{lock}") handleShift();
-	}
-
-	function handleShift() {
-		let currentLayout = keyboard.options.layoutName;
-		let shiftToggle = currentLayout === "default" ? "shift" : "default";
-
-		keyboard.setOptions({
-			layoutName: shiftToggle,
-		});
-	}
+let keyboard = new Keyboard({
+  onChange: (input) => onChange(input),
+  onKeyPress: (button) => onKeyPress(button),
+  physicalKeyboardHighlight: true,
+  ...fullKeyboardLayout,
 });
+
+document.querySelector(".input").addEventListener("input", (event) => {
+  const inputValue = event.target.value;
+  keyboard.setInput(inputValue);
+});
+
+function onChange(input) {
+  document.querySelector(".input").value = input;
+}
+
+function onKeyPress(button) {
+  console.log("Button pressed", button);
+
+  /**
+   * If you want to handle the shift and caps lock buttons
+   */
+
+  if (button === "{shiftleft}" || button === "{lock}") handleShift();
+}
+
+function handleShift() {
+  let currentLayout = keyboard.options.layoutName;
+  let shiftToggle = currentLayout === "default" ? "shift" : "default";
+
+  keyboard.setOptions({
+    layoutName: shiftToggle,
+  });
+}
