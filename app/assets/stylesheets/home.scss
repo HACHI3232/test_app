@@ -117,7 +117,7 @@ header {
 	display: inline-flex;
   justify-content: center;
   width: 330px;
-  height: 250px;
+  height: 300px;
   border-radius: 15px;
 	background-color: #FFFFFF;
   border: 6px solid #101010;
@@ -287,6 +287,8 @@ header {
 }
 
 .box{
+	font-family: 'DotGothic16', sans-serif;
+	font-weight: 600;
 	background-color: white;
 	border-radius: 16px;
 	padding: 15px;

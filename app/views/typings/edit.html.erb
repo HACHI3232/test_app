@@ -32,7 +32,7 @@
 <%= javascript_pack_tag 'keyboard' %>
 
 <script>
-  const dictionaries = <%= raw @random_posts&.to_json || [].to_json %>;
+  var dictionaries = <%= raw @random_posts&.to_json || [].to_json %>;
   let currentWordIndex = 0;
   const input = document.getElementById("input");
   const meanDom = document.getElementById("mean");

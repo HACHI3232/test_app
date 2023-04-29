@@ -1,5 +1,4 @@
 <body>
-  
 <div class="main top-main">
   <div class="top-message">
     <span class="dot-font" id="ityped"></span>
@@ -12,18 +11,22 @@
   </div>
   <nav class="main__nav">
     <div class="main__nav__items">
-      <a href="<%= about_path %>" class="dot-font">
-        <%= image_tag("mark_shoshinsha.png", width: 50, height: 50, style: "vertical-align: middle; margin-right: 10px;") %>
-        About
-      </a>
-      <a href="<%= posts_path %>" class="dot-font">
-        <%= image_tag("book_blue.png", width: 50, height: 50, style: "vertical-align: middle; margin-right: 10px;") %>
-        Dictionary
-      </a>
-      <a href="<%= typings_path %>" class="dot-font">
-        <%= image_tag("t.png", width: 50, height: 50, style: "vertical-align: middle; margin-right: 10px;") %>
-        Typing
-      </a>
+    <%= link_to about_path, class: "dot-font" do %>
+      <%= image_tag("mark_shoshinsha.png", size: "50x50", style: "vertical-align: middle; margin-right: 10px;") %>
+      About
+    <% end %>
+    <%= link_to posts_path, class: "dot-font" do %>
+      <%= image_tag("book_blue.png", size: "50x50", style: "vertical-align: middle; margin-right: 10px;") %>
+      Dictionary
+    <% end %>
+    <%= link_to typings_path, class: "dot-font" do %>
+      <%= image_tag("t.png", size: "50x50", style: "vertical-align: middle; margin-right: 10px;") %>
+      Typing
+    <% end %>
+    <%= link_to character_path(1), class: "dot-font" do %>
+      <%= image_tag("egg.png", size: "50x50", style: "vertical-align: middle; margin-right: 10px;") %>
+      Character
+    <% end %>
     </div>
   </nav>
 </div>

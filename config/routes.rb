@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get "/categories/index" => "categories#index"
 
     resources :posts
-    resources :categories
-    resources :characters
+    resources :categories 
+    resources :characters ,only: [:show]
 end

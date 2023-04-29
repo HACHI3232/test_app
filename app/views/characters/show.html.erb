@@ -1,0 +1,16 @@
+<div class="body">
+  <div class ="head">
+  </div>
+  <div class="show-character-wrap">
+    <div class="show-my-characters">
+      <div class ="show-character_status">
+        <div class="balloon-think">
+          <div class="name dot-font">Yours <%= @character.name %></div>
+          <div class="level dot-font"> Level   <%= @character.level %></div>
+        </div> 
+      </div>
+      <div class="my__character"><%= image_tag("k-#{@character.level}.gif")%></div>
+    </div>
+  </div>
+</div>
+  <%= render "shared/footer" %>
