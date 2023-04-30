@@ -1,0 +1,77 @@
+/* ヘッダー ================================ */
+header {
+	height: 64px;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+}
+
+
+.header__title {
+  &__img,
+  &__logo {
+    display: inline-block;
+    vertical-align: middle;
+
+  }
+}
+.header_logo{
+	margin: 20px 0 0 50px;
+	color: #613933;
+}
+
+
+.main {
+  width: 100%;
+  height: 229px;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-message{
+	font-size: 70px;
+}
+
+
+.main__nav {
+	display: inline-flex;
+  justify-content: center;
+  width: 330px;
+  height: 300px;
+  border-radius: 15px;
+	background-color: #FFFFFF;
+  border: 6px solid #101010;
+	background-color: rgba(255, 255, 255, 0.5); /* 透過させる */
+}
+/* ハンバーガー	================================ */
+
+.hamburger__nav {
+	display: inline-flex;
+  justify-content: center;
+  width: 480px;
+  height: 430px;
+  border-radius: 15px;
+	  background-color: #FFFFFF;
+  border: 6px solid #101010;
+	background-color: rgba(255, 255, 255, 0.5); /* 透過させる */
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.main__nav__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* 変更 */
+  align-items: flex-start;
+  padding: 25px 0	0 0;
+
+}
+
+
+.header__nav__items a {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}

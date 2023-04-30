@@ -13,7 +13,6 @@ html {
 	font-family: 'Mobile Font Regular';
 	font-style: normal;
 	font-weight: normal;
-	src: local('Mobile Font Regular'), url('./MobileFont.woff') format('woff');
 	margin: 5px;
 }
 
@@ -77,87 +76,6 @@ body {
 	clear: both;
 }
 
-
-/* ヘッダー ================================ */
-header {
-	height: 64px;
-	position: absolute;
-	z-index: 1;
-	width: 100%;
-}
-
-
-.header__title {
-  &__img,
-  &__logo {
-    display: inline-block;
-    vertical-align: middle;
-
-  }
-}
-.header_logo{
-	margin: 20px 0 0 50px;
-	color: #613933;
-}
-
-
-.main {
-  width: 100%;
-  height: 229px;
-  justify-content: center;
-  align-items: center;
-}
-
-.top-message{
-	font-size: 70px;
-}
-
-
-.main__nav {
-	display: inline-flex;
-  justify-content: center;
-  width: 330px;
-  height: 300px;
-  border-radius: 15px;
-	background-color: #FFFFFF;
-  border: 6px solid #101010;
-	background-color: rgba(255, 255, 255, 0.5); /* 透過させる */
-}
-/* ハンバーガー	================================ */
-
-.hamburger__nav {
-	display: inline-flex;
-  justify-content: center;
-  width: 480px;
-  height: 430px;
-  border-radius: 15px;
-	  background-color: #FFFFFF;
-  border: 6px solid #101010;
-	background-color: rgba(255, 255, 255, 0.5); /* 透過させる */
-	top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-.main__nav__items {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* 変更 */
-  align-items: flex-start;
-  padding: 25px 0	0 0;
-
-}
-
-
-.header__nav__items a {
-  display: block;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-
-
 /* top ================================ */
 .top-main {
 	text-align: center;
@@ -184,82 +102,6 @@ header {
 
 .top-main p {
 	font-size: 24px;
-}
-
-
-
-
-
-/* フォーム================================ */
-.form {
-	max-width: 600px;
-	margin: 0 auto;
-	background-color: white;
-	box-shadow: 0 2px 6px #c1ced7;
-}
-
-.form-heading {
-	font-weight: 300;
-	margin: 60px 0 20px;
-	font-size: 48px;
-	color: #bcc8d4;
-}
-
-.form-body {
-	padding: 30px;
-}
-
-.form-error {
-	color: #ff4d75;
-}
-
-.form input {
-	width: 100%;
-	border: 1px solid #d8dadf;
-	padding: 10px;
-	color: #57575f;
-	font-size: 16px;
-	letter-spacing: 2px;
-	border-radius: 2px;
-}
-
-.form textarea {
-	width: 100%;
-	min-height: 110px;
-	font-size: 16px;
-	letter-spacing: 2px;
-}
-
-.form input[type="submit"] {
-	background-color: #3ecdc6;
-	color: white;
-	cursor: pointer;
-	font-weight: 300;
-	width: 120px;
-	border-radius: 2px;
-	margin-top: 8px;
-	margin-bottom: 0;
-	float: right;
-}
-
-.form-body:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-/* フラッシュ ================================ */
-.flash {
-	padding: 10px 0;
-	color: #000;
-	background: rgb(251, 170, 88);
-	text-align: center;
-	position: absolute;
-	top: 64px;
-	z-index: 10;
-	width: 100%;
-	border-radius: 0 0 2px 2px;
-	font-size: 14px;
 }
 
 
@@ -293,10 +135,16 @@ header {
 	border-radius: 16px;
 	padding: 15px;
 }
-/* footer ================================ */
-footer{position: fixed;
-bottom: 0;
-left: 0;
-right: 0;
-text-align: center;
+/* フラッシュ ================================ */
+.flash {
+	padding: 10px 0;
+	color: #000;
+	background: rgb(251, 170, 88);
+	text-align: center;
+	position: absolute;
+	top: 64px;
+	z-index: 10;
+	width: 100%;
+	border-radius: 0 0 2px 2px;
+	font-size: 14px;
 }

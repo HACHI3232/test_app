@@ -2,15 +2,12 @@
 $base-color: #abf3e6;
 
 /* posts/header ================================ */
-
-
 .header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	background: rgba(255, 255, 255, 0.5);
 }
-
 
 .header span img {
 	margin-left: 16px;
@@ -24,7 +21,6 @@ $base-color: #abf3e6;
 	font-size: 40px;
 	margin-top: 15px;
 }
-
 
 .header .menu-icon {
 	margin-right: 64px;
@@ -45,11 +41,7 @@ $base-color: #abf3e6;
 	box-shadow: 0 2px 6px #c1ced7;
 }
 
-
-
-
-/* posts/new 辞書の画面================================ */
-
+/* posts/ 辞書の画面================================ */
 
 /* 単語帳のカード */
 .card-container {
@@ -75,8 +67,6 @@ $base-color: #abf3e6;
 	border-radius: 8px;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 	position: relative;
-
-
 }
 
 .card__words {
@@ -97,126 +87,9 @@ $base-color: #abf3e6;
 }
 
 
-/* posts/create 単語を保存する画面 ================================ */
-.post-main {
-	background-color: $base-color;
-	display: flex;
-	justify-content: center;
-}
-
-.form__wrapper {
-	height: 500px;
-	width: 500px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin-top: 30px;
-	border-radius: 8px;
-	background-color: #ffffff;
-	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-}
-
-.page-heading {
-	text-align: center;
-	margin-bottom: 40px;
-}
-
-
-
-/* posts indexボタン */
-
-.class-select-tab{
-	float: left;
-	margin: 10px 0 0 60px;
-}
-
-.button-section {
-	text-align: right;
-	margin: 24px 25px 0 0;
-
-}
-
-.form-control{
-	height: 50px;
-	width: 150px;
-	font-size: 16px;
-	font-weight: bolder;
-	color: #212121;
-	border-radius: 5px;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-/* 保存ボタン	CSS */
-.content_save_btn {
-	text-align: center;
-	margin-top: 20px;
-}
-
-.button-6 {
-	// 共通のスタイル
-	align-items: center;
-	background-color: #ffffff;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	border-radius: 0.25rem;
-	box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-	box-sizing: border-box;
-	color: rgba(0, 0, 0, 0.85);
-	cursor: pointer;
-	display: inline-flex;
-	font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	font-weight: 600;
-	justify-content: center;
-	line-height: 1.25;
-	margin: 0;
-	min-height: 3rem;
-	padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
-	position: relative;
-	text-decoration: none;
-	transition: all 250ms;
-	user-select: none;
-	-webkit-user-select: none;
-	touch-action: manipulation;
-	vertical-align: baseline;
-	width: 140px;
-	margin: 10px 0;
-
-	// 変更したいボタンにだけ適用するスタイル
-	&.button-large {
-			width: 170px;
-	}
-
-	&.button-new {
-		width: 220px;
-}
-
-	// ホバー時のスタイル
-	&:hover,
-	&:focus {
-			border-color: rgba(0, 0, 0, 0.15);
-			box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-			color: rgba(0, 0, 0, 0.65);
-			&:hover {
-					transform: translateY(-1px);
-			}
-	}
-
-	// アクティブ時のスタイル
-	&:active {
-			background-color: #f0f0f1;
-			border-color: rgba(0, 0, 0, 0.15);
-			box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-			color: rgba(0, 0, 0, 0.65);
-			transform: translateY(0);
-	}
-}
-
 
 
 /* 削除・編集ボタン	CSS */
-
-
 .before-btn-edit:hover::after,
 .btn-delete:hover::after {
   content: attr(class);

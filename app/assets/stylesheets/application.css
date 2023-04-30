@@ -17,5 +17,5 @@
   font-family: 'Mobile Font Regular';
   font-style: normal;
   font-weight: normal;
-  src: local('Mobile Font Regular'), url('MobileFont.woff') format('woff');
+  src: local('Mobile Font Regular'), url('./font/MobileFont.woff') format('woff');
   }
