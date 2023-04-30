@@ -1,4 +1,5 @@
 <%= form_with(model: @post, local: true) do |f| %>
+<%= render 'shared/error_messages', model: f.object %>
 <div class="field" style="text-align: center;">
   <%= f.collection_select :category_id, @categories || [], :id, :name, { prompt: '辞書を選択' }, { class: 'form-control' } %>
 </div>

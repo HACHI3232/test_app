@@ -1,7 +1,5 @@
 class Category < ApplicationRecord
-  with_options presence: true do
-    validates :name
-  end
-
+  validates :name, presence: true 
+  
   has_many :posts
 end
