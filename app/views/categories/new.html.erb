@@ -4,7 +4,6 @@
     <div class="form__wrapper">
       <h3 class="page-heading">新しい辞書を登録する</h3>
       <%= form_with(model: @category, local: true) do |f| %>
-      <%= render 'shared/error_messages', model: f.object %>
         <div class="field" style="text-align: center;">
           <%= f.label :name, "辞書の種類" %><br>
           <%= f.text_area :name, class: "form__text", id: "dictionary_word" %>
