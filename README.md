@@ -11,7 +11,8 @@
 
 # URL
 
-
+https://minetyping-test.onrender.com
+現在調整中のため、一部実装できてない機能があります
 ※render.comの仕様上、読み込みが出来ない、サイトがつながるまで時間がかかる場合があります。
   
 
