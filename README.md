@@ -11,7 +11,6 @@
 
 # URL
 
-https://test-app-77dg.onrender.com
 
 ※render.comの仕様上、読み込みが出来ない、サイトがつながるまで時間がかかる場合があります。
   
